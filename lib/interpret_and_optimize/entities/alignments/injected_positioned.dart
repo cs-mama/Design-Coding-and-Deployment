@@ -1,0 +1,48 @@
+import 'package:parabeac_core/generation/generators/visual-widgets/pb_positioned_gen.dart';
+import 'package:parabeac_core/interpret_and_optimize/entities/interfaces/pb_injected_intermediate.dart';
+import 'package:parabeac_core/interpret_and_optimize/entities/subclasses/pb_intermediate_constraints.dart';
+import 'package:parabeac_core/interpret_and_optimize/entities/subclasses/pb_intermediate_node.dart';
+import 'package:parabeac_core/interpret_and_optimize/helpers/child_strategy.dart';
+
+class InjectedPositioned extends PBIntermediateNode
+    implements PBInjectedIntermediate {
+  final PositionedValueHolder valueHolder;
+
+  @override
+  ChildrenStrategy childrenStrategy = OneChildStrategy('child');
+
+  @override
+  String name;
+
+  InjectedPositioned(
+    this.name,
+    String UUID,
+    Rectangle3D frame, {
+    this.valueHolder,
+    constraints,
+  }) : super(UUID, frame, '', constraints: constraints) {
+    generator = PBPositionedGenerator(overrideChildDim: true);
+  }
+
+  @override
+  PBIntermediateNode fromJson(Map<String, dynamic> json) => null;
+}
+
+/// Class to help us communicate and manipulate positioning values.
+class PositionedValueHolder {
+  double top;
+  double bottom;
+  double left;
+  double right;
+
+  double height;
+  double width;
+
+  PositionedValueHolder(
+      {this.top, this.bottom, this.left, this.right, this.height, this.width}) {
+    // top ??= 0;
+    // bottom ??= 0;
+    // left ??= 0;
+    // right ??= 0;
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "breakpoints": {
+    "mobile": 360,
+    "tablet": 600,
+    "desktop": 1280
+  },
+  "designSystem": "material3",
+  "componentIsolation": "widgetbook",
+  "folderArchitecture": "domain",
+  "project-name": "foo",
+  "project-type": "screens",
+  "fig": "Enter your Figma File ID here",
+  "figKey": "Enter your Figma API Key here",
+  "out": "/absolute/path/to/output/directory"
+}

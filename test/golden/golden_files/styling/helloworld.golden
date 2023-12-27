@@ -1,0 +1,59 @@
+// *********************************************************************************
+// PARABEAC-GENERATED CODE. DO NOT MODIFY.
+//
+// FOR MORE INFORMATION ON HOW TO USE PARABEAC, PLEASE VISIT docs.parabeac.com
+// *********************************************************************************
+
+import 'package:flutter/material.dart';
+import 'package:auto_size_text/auto_size_text.dart';
+
+class Helloworld extends StatefulWidget {
+  final String? ovrHelloworld;
+
+  const Helloworld({
+    Key? key,
+    this.ovrHelloworld,
+  }) : super(key: key);
+
+  @override
+  _Helloworld createState() => _Helloworld();
+}
+
+class _Helloworld extends State<Helloworld> {
+  _Helloworld();
+
+  @override
+  Widget build(BuildContext context) {
+    return LayoutBuilder(builder: (context, constraints) {
+      return Container(
+          decoration: BoxDecoration(),
+          child: Stack(children: [
+            Positioned(
+              left: constraints.maxWidth * 0.297,
+              width: constraints.maxWidth * 0.41,
+              top: constraints.maxHeight * 0.345,
+              height: constraints.maxHeight * 0.221,
+              child: Container(
+                  height: constraints.maxHeight * 0.22123893805309736,
+                  width: constraints.maxWidth * 0.40963855421686746,
+                  child: AutoSizeText(
+                    widget.ovrHelloworld ?? 'Hello world',
+                    style: TextStyle(
+                      fontFamily: 'Roboto',
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w400,
+                      letterSpacing: 0.0,
+                      color: Colors.black,
+                    ),
+                    textAlign: TextAlign.left,
+                  )),
+            ),
+          ]));
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+}
